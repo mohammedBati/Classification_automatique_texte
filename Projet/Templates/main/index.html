@@ -1,0 +1,86 @@
+{% extends 'main/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block content %}
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+    <script src="{% static "home-static/js/logger.js" %}"></script>
+    <!-- script src="js/examples.js"></script -->
+    <script src="{% static "home-static/js/basics.js" %}"></script>
+    <script src="{% static "home-static/js/poo.js" %}"></script>
+    <script src="{% static "home-static/js/but.js" %}"></script>
+    <link rel="stylesheet" href="{% static "home-static/css/but.css" %}">
+    <link rel="stylesheet" href="{% static "home-static/css/screen.css" %}">
+</head>
+<body onload="main()" style="background-image : url('{% static "home-static/img/1980370.jpg" %}')">
+<main class="model">
+  <section class="text-center pt30 pb75  general-section-container  ">
+  <div class="container general-section">
+    <div class="row">
+      <div class="col-lg-12 general-section__content-wrapper">
+        <h1 class="unl">Classification du texte</h1>
+        <p class="px"><h5>L'objectif de la classification de texte est de pouvoir associer automatiquement des documents à des categories. </h5></p>
+        <p class="px"><h5>La classification de texte devient une partie importante des processus métier car elle peut améliorer les décisions basées sur les données.</h5></p><p class="px"><h5> Notre plate-forme permet aux utilisateurs de classifier un texte selon quatre catégories : business, science and technology, entertainment et health, parmi un modèle de Naive Bayes, Support vector machine, Logistic Regression ou K-voisins les plus proches.</h5></p>
+          <br/>
+         <hr color="black"/>
+         <h1 class="unl">Classifier Votre Texte Selon Une Catégorie :
+         Business, Science and Technology, Entertainment Ou Health.</h1>
+        <section class="api-predict"><div class="api-predict__control">
+          <div class="nlp-textarea-wrapper">
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+            <textarea type="text" class="nlp-textarea" name="param"></textarea>
+            <p class="secondary-text text-center">( Tapez le texte et cliquez sur prédire )</p></div></div>
+            <div class="api-predict__button">
+              <label for="actual-btn">  <select name="sel">
+                  <option>Naive Bayes</option>
+                  <option>K-NN</option>
+                  <option>SVM</option>
+                  <option>Logistic Regression</option>
+                </select>
+                </label>
+            <input type="submit" class="skyl-btn skyl-btn-round-lg skyl-btn-red" style="background-color:green;" value="predect"></div></section>
+          </form>
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+          <label for="actual-btn">  <select name="sel">
+              <option>Naive Bayes</option>
+              <option>K-NN</option>
+              <option>SVM</option>
+              <option>Logistic Regression</option>
+            </select>
+            </label>
+            <!-- actual upload which is hidden -->
+
+              <!-- our custom upload button -->
+               <label for="actual-btn"><input type='file' name='files' multiple='multiple'></label>
+               <!-- multiple="multiple" -->
+               <div class="api-predict__button">
+               <input type="submit" class="skyl-btn skyl-btn-round-lg skyl-btn-red" style="background-color:green;" value="Upload"></div>
+               {% if url %}
+               <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+               {% endif %}
+              <!-- name of file chosen -->
+
+
+              <section class="api-type text-right secondary-text"><span>Traitement Automatique du Langage Naturel</span></section></main>
+
+                  <div style="border: solid 5px green;background-image : url('{% static "home-static/img/1775387.jpg" %}')" id="screen" class="screen">
+                    {% for data in data1 %}
+                    {{data}} <br>
+                    {% endfor %}
+                    {{data2}}
+                  </div>
+                </form>
+<div class="get-started-container" style="background-image:url(https://storage.googleapis.com/skyl-ai-cdn/assets/object-detection-on-road.webp)">
+  <div class="get-started-mask"></div>
+  <div class="get-started-container__wrapper">
+    <h3 class="heading-tertiary-white get-started-container__wrapper__message"></h3>
+    <a href="" class=""><span class="lnr lnr-chevron-right icon icon__chevron-right"></span></a></div></div>
+
+
+  </body>
+</html>
+{% endblock %}

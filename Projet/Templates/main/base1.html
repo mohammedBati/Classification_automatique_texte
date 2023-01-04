@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "home-static/css/txt.css" %}">
+
+    <title></title>
+  </head>
+  <style media="screen">
+
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><h3>Natural Language Processing</h3></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"  style="left: 100%;">
+      <div class="navbar-nav" >
+        <a class="nav-item nav-link active" href="{% url 'pfe:home' %}">Home <span class="sr-only">(current)</span></a>
+        <a class="btn btn-outline-success"  href="{% url 'pfe:index' %}">Text classification</a>
+        <!--<a class="nav-item nav-link" href="{% url 'pfe:logout' %}">Log-out</a>-->
+      </div>
+    </div>
+  </nav>
+    <header class="hero-image" style="background-image : url('{% static "home-static/img/1728960.jpg" %}')">
+      <div class="txt">
+        <div class="container">
+        <h1 class="d">Traitement Automatique du Langage Naturel (TAL / NLP) : New vision to futur</h1>
+          <p ><h2 class="top">Dialoguer Naturellement avec une Machine comme  avec une Personne...</h2>
+            <h3 class="top">Construire et Déployer les Models d'Apprentissage Automatique pour les Images, Videos, Audio, Emails, Flux Sociaux et les Documents</h3>
+         </p>
+        </div>
+      </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <div class="footer">
+   <p>&copy; copyright: SMI6 2021<br />Facult&eacute; des Sciences Dhar Mehraz</p>
+  </div>
+  </body>
+</html>

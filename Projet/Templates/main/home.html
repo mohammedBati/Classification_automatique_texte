@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block content %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body  style="background-image : url('{% static "home-static/img/1980370.jpg" %}')">
+    <br/>
+  <h2 class="title">Possibilités illimitées avec le traitement automatique du langage naturel</h2><br/>
+  <p class="px">Le Traitement Automatique du Langage Naturel trouve de nombreuses applications dans la vie : traduction de texte, correcteur orthographique, résumé automatique d’un contenu, synthèse vocale, classification de texte, analyse d’opinion/sentiment, etc...</p>
+   <br/>
+   <p class="px">
+  <img src="{% static "home-static/img/nlp-tutorial-text-classification-60b609c0b7a2622d2b0d6122f2b27f97.png" %}" width="1100px" height="540px"/>
+ </p><br/>
+ <hr/ color="black"><br/>
+ <h2 class="title">Traitement Automatique du Langage Naturel (TALN)</h2><br/>
+ <p class="px">Le traitement du langage naturel (TALN) est une branche de l'intelligence artificielle qui forme les machines à comprendre le texte et les mots parlés comme les humains. Le TALN donne aux machines la possibilité de traiter le langage par le biais de texte et de tirer davantage de valeur des données. Il joue un rôle important dans les divers domaines de la vie.</p>
+<br/><p class="px" >
+<img src="{% static "home-static/img/cp.png" %}" /></p>
+<br/>
+<hr/ color="black"><br/>
+<h2 class="title">Qu'est-ce que la classification de texte en TALN?</h2><br/>
+<p class="px" style="text-align:center;">La classification de texte ou la catégorisation de texte est une technique de traitement du langage naturel (TALN) qui permet aux machines de comprendre puis de catégoriser le texte en groupes organisés. Les algorithmes de classification permettent aux machines d'analyser automatiquement le texte et de lui attribuer des catégories prédéfinies, en fonction de son contenu. Grâce à notre plate-forme, vous pouvez rapidement classifier vos documents en haute qualité en quelques secondes.</p></p></div></div>
+<br/>
+<div class="get-started-container" style="background-image:url({% static "home-static/img/object-detection-on-road.webp" %});">
+  <div class="get-started-mask"></div>
+  <div class="get-started-container__wrapper">
+    <h3 style="font-size: 1.25rem;
+    color: #fff0f0;">
+Prêt à commencer ? </h3><br/>
+    <a class="btn btn-outline-success" style="color: rgb(141 222 159);background-color: #000000;font-size: 1.2rem;border: 3px solid ;margin-left:15px;" href="{% url 'pfe:index' %}">Texte classification</a></div></div>
+
+
+  </body>
+</html>
+
+{% endblock %}

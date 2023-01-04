@@ -1,0 +1,26 @@
+.screen {
+    background-color: gray;
+    color: white;
+    height: 200px;
+    padding: 5px;
+    border: solid 5px green;
+    margin: 30px;
+    box-shadow: 5px 5px 10px gray;
+    overflow: auto;
+    font-family: Consolas;
+}
+
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.examples > span {
+    color: blue;
+    cursor: pointer;
+    width: 90px;
+}
+
+.examples > span:hover {
+    text-decoration: underline;
+}
